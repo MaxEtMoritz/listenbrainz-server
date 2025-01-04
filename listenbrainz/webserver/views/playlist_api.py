@@ -410,6 +410,11 @@ def search_playlist():
 
     :param query: The search query string.
     :type query: ``str``
+    :param count: The number of playlists to return (for pagination). Default
+        :data:`~webserver.views.api.DEFAULT_NUMBER_OF_PLAYLISTS_PER_CALL`
+    :type count: ``int``
+    :param offset: The offset of into the list of playlists to return (for pagination)
+    :type offset: ``int``
     :statuscode 200: Yay, you have data!
     :statuscode 400: invalid query string, see error message for details.
     :statuscode 401: invalid authorization. See error message for details.
